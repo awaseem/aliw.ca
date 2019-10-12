@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 
 import Page from '../components/Page'
@@ -7,6 +7,7 @@ import IndexLayout from '../layouts'
 import { NameHeader } from '../components/NameHeader'
 import { MainContent } from '../components/MainContent'
 import { Footer } from '../components/Footer'
+import { AnimatedContainer, Animation } from '../components/AnimatedContainer'
 
 const IndexContainer = styled.div`
   display: flex;
@@ -15,19 +16,32 @@ const IndexContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `
+function IndexPage() {
+  const [animation, setAnimation] = useState(Animation.hidden)
 
-const IndexPage = () => (
-  <IndexLayout>
-    <Page>
-      <Container>
-        <IndexContainer>
-          <NameHeader name={'Ali Waseem'} />
-          <MainContent currentJob={'ATB Innovation'} previousJob={'Shareworks by Morgan Stanley'} email={'hello@aliwaseem.com'} />
-          <Footer />
-        </IndexContainer>
-      </Container>
-    </Page>
-  </IndexLayout>
-)
+  useEffect(() => {
+    setAnimation(Animation.show)
+  }, [])
+
+  return (
+    <IndexLayout>
+      <Page>
+        <Container>
+          <IndexContainer>
+            <AnimatedContainer animation={animation} key={'Header'} delay={350}>
+              <NameHeader name={'Ali Waseem'} />
+            </AnimatedContainer>
+            <AnimatedContainer animation={animation} key={'Content'} delay={200}>
+              <MainContent currentJob={'ATB Innovation'} previousJob={'Shareworks by Morgan Stanley'} email={'hello@aliwaseem.com'} />
+            </AnimatedContainer>
+            <AnimatedContainer key={'Footer'} animation={animation}>
+              <Footer key={'Footer'} />
+            </AnimatedContainer>
+          </IndexContainer>
+        </Container>
+      </Page>
+    </IndexLayout>
+  )
+}
 
 export default IndexPage
