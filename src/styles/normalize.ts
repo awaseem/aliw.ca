@@ -20,8 +20,7 @@ export default `
   body {
     width: 100%;
     overflow-x: hidden;
-    overflow-y: scroll;
-    font-family: ${fonts.lato};
+    font-family: ${fonts.main};
     color: ${colors.black};
     background-color: ${colors.white};
     -webkit-text-size-adjust: 100%;

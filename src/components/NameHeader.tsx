@@ -7,7 +7,7 @@ const StyledContainer = styled.div`
 `
 
 const StyledText = styled.span`
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.35rem;
 `
 

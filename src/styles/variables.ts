@@ -26,7 +26,7 @@ export const fonts = {
     '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif',
   serif: 'Georgia, "Times New Roman", Times, serif',
   monospace: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace',
-  lato: '"Lato", sans-serif;'
+  main: `'Roboto', sans-serif`
 }
 
 export const breakpoints = {
