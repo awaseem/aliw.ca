@@ -12,8 +12,11 @@ const StyledContainer = styled.div`
 
 interface ContainerProps {
   className?: string
+  children: React.ReactNode
 }
 
-const Container: React.FC<ContainerProps> = ({ children, className }) => <StyledContainer className={className}>{children}</StyledContainer>
+function Container({ children, className }: ContainerProps) {
+  return <StyledContainer className={className}>{children}</StyledContainer>
+}
 
 export default Container
