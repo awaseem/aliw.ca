@@ -17,12 +17,19 @@ export interface AnimatedContainerProps {
 
 const AnimatedNameContainer = posed.div({
   [Animation.hidden]: { opacity: 0, y: 20 },
-  [Animation.show]: { opacity: 1, y: 0, delay: (props: { delay: number }) => props.delay || 0 },
+  [Animation.show]: {
+    opacity: 1,
+    y: 0,
+    delay: (props: { delay: number }) => props.delay || 0,
+    transition: {
+      duration: 300
+    }
+  },
   [Animation.leave]: {
     y: -20,
     opacity: 0,
     transition: {
-      duration: 150
+      duration: 300
     }
   }
 })

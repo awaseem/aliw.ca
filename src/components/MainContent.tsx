@@ -10,7 +10,7 @@ const StyledContainer = styled.div``
 const HeadingContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 
   @media screen and (max-width: 850px) {
     flex-direction: column;
