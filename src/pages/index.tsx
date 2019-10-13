@@ -8,6 +8,7 @@ import { NameHeader } from '../components/NameHeader'
 import { MainContent } from '../components/MainContent'
 import { Footer } from '../components/Footer'
 import { AnimatedContainer, Animation } from '../components/AnimatedContainer'
+import { IntoHeader } from '../components/IntroHeader'
 
 const IndexContainer = styled.div`
   display: flex;
@@ -16,11 +17,28 @@ const IndexContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `
+
+const IntroContainer = styled.div`
+  position: fixed;
+  top: 45%;
+  left: 45%;
+`
+
 function IndexPage() {
+  const [introAnimation, setIntroAnimation] = useState(Animation.hidden)
   const [animation, setAnimation] = useState(Animation.hidden)
 
+  // useEffect(() => setAnimation(Animation.show), [])
+
   useEffect(() => {
-    setAnimation(Animation.show)
+    setIntroAnimation(Animation.show)
+    setTimeout(() => {
+      setIntroAnimation(Animation.leave)
+    }, 1250)
+
+    setTimeout(() => {
+      setAnimation(Animation.show)
+    }, 1400)
   }, [])
 
   return (
@@ -28,6 +46,11 @@ function IndexPage() {
       <Page>
         <Container>
           <IndexContainer>
+            <IntroContainer>
+              <AnimatedContainer animation={introAnimation} delay={150}>
+                <IntoHeader />
+              </AnimatedContainer>
+            </IntroContainer>
             <AnimatedContainer animation={animation} key={'Header'} delay={350}>
               <NameHeader name={'Ali Waseem'} />
             </AnimatedContainer>
