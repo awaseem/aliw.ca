@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
 import { colors } from '../styles/variables'
+import { AnimatedContainer, Animation } from './AnimatedContainer'
+
+const skills = ['TypeScript', 'Golang']
 
 const StyledContainer = styled.div``
 
 const HeadingContainer = styled.div`
   display: flex;
   flex-direction: row;
-  align-item: center;
   margin-bottom: 1.75rem;
+
+  @media screen and (max-width: 850px) {
+    flex-direction: column;
+  }
 `
 
 const MainHeader = styled.h1`
@@ -17,7 +23,12 @@ const MainHeader = styled.h1`
 `
 
 const TechWeight = styled.b`
+  margin-left: 10px;
   font-weight: 500;
+
+  @media screen and (max-width: 850px) {
+    margin-left: 0px;
+  }
 `
 
 const TaglineContainer = styled.div`
@@ -42,15 +53,42 @@ export interface MainContentProps {
   email: string
   currentJob: string
   previousJob: string
+  animateSkills: boolean
 }
 
-export function MainContent({ email, currentJob, previousJob }: MainContentProps) {
+export function MainContent({ email, currentJob, previousJob, animateSkills }: MainContentProps) {
+  const [skillIndex, setSkillIndex] = useState(0)
+  const [techAnimation, setTechAnimation] = useState(Animation.show)
+
+  useEffect(() => {
+    if (animateSkills) {
+      setTimeout(() => {
+        setTechAnimation(Animation.leave)
+      }, 1500)
+
+      setTimeout(() => {
+        if (skillIndex === skills.length - 1) {
+          setSkillIndex(0)
+        } else {
+          setSkillIndex(skillIndex + 1)
+        }
+      }, 2000)
+
+      setTimeout(() => {
+        setTechAnimation(Animation.show)
+      }, 2500)
+    }
+  }, [animateSkills, skillIndex])
+
   return (
     <StyledContainer>
       <HeadingContainer>
-        <MainHeader>
-          Let's talk about <TechWeight>TypeScript.</TechWeight>
-        </MainHeader>
+        <MainHeader>Let's talk about</MainHeader>
+        <AnimatedContainer animation={techAnimation}>
+          <MainHeader>
+            <TechWeight>{skills[skillIndex]}.</TechWeight>
+          </MainHeader>
+        </AnimatedContainer>
       </HeadingContainer>
       <TaglineContainer>
         <p>

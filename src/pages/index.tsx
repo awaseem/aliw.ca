@@ -27,11 +27,13 @@ const IntroContainer = styled.div`
 function IndexPage() {
   const [introAnimation, setIntroAnimation] = useState(Animation.hidden)
   const [animation, setAnimation] = useState(Animation.hidden)
+  const [startSkillAnimation, setStartSkillAnimation] = useState(false)
 
   // useEffect(() => setAnimation(Animation.show), [])
 
   useEffect(() => {
     setIntroAnimation(Animation.show)
+
     setTimeout(() => {
       setIntroAnimation(Animation.leave)
     }, 1250)
@@ -39,6 +41,10 @@ function IndexPage() {
     setTimeout(() => {
       setAnimation(Animation.show)
     }, 1400)
+
+    setTimeout(() => {
+      setStartSkillAnimation(true)
+    }, 1600)
   }, [])
 
   return (
@@ -55,7 +61,12 @@ function IndexPage() {
               <NameHeader name={'Ali Waseem'} />
             </AnimatedContainer>
             <AnimatedContainer animation={animation} key={'Content'} delay={200}>
-              <MainContent currentJob={'ATB Innovation'} previousJob={'Shareworks by Morgan Stanley'} email={'hello@aliwaseem.com'} />
+              <MainContent
+                animateSkills={startSkillAnimation}
+                currentJob={'ATB Innovation'}
+                previousJob={'Shareworks by Morgan Stanley'}
+                email={'hello@aliwaseem.com'}
+              />
             </AnimatedContainer>
             <AnimatedContainer key={'Footer'} animation={animation}>
               <Footer key={'Footer'} />
