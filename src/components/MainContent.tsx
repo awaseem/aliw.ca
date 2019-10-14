@@ -52,12 +52,23 @@ export interface MainContentProps {
   email: string
   jobTitle: string
   currentJob: string
+  currentJobLink: string
   previousJob: string
+  previousJobLink: string
   animateSkills: boolean
   skills: string[]
 }
 
-export function MainContent({ email, currentJob, jobTitle, previousJob, animateSkills, skills }: MainContentProps) {
+export function MainContent({
+  email,
+  currentJob,
+  currentJobLink,
+  jobTitle,
+  previousJob,
+  previousJobLink,
+  animateSkills,
+  skills
+}: MainContentProps) {
   const [skillIndex, setSkillIndex] = useState(0)
   const [techAnimation, setTechAnimation] = useState(Animation.show)
 
@@ -91,10 +102,16 @@ export function MainContent({ email, currentJob, jobTitle, previousJob, animateS
       </HeadingContainer>
       <TaglineContainer>
         <p>
-          Ali is a <b>{jobTitle}</b> currently working at <JobLocationHref onClick={() => undefined}>{currentJob}.</JobLocationHref>
+          Ali is a <b>{jobTitle}</b> currently working at{' '}
+          <JobLocationHref href={currentJobLink} target="_blank">
+            {currentJob}.
+          </JobLocationHref>
         </p>
         <p>
-          Previously at <JobLocationHref>{previousJob}</JobLocationHref>
+          Previously at{' '}
+          <JobLocationHref href={previousJobLink} target="_blank">
+            {previousJob}
+          </JobLocationHref>
         </p>
       </TaglineContainer>
       <EmailTag>{email}</EmailTag>

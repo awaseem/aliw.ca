@@ -68,7 +68,9 @@ function IndexPage() {
                 skills={homeData.skills}
                 animateSkills={startSkillAnimation}
                 currentJob={homeData.currentCompany.name}
+                currentJobLink={homeData.currentCompany.link}
                 previousJob={homeData.previousCompany.name}
+                previousJobLink={homeData.previousCompany.link}
                 email={homeData.email}
               />
             </AnimatedContainer>
