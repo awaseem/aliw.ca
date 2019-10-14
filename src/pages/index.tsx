@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
+import { graphql } from 'gatsby'
 
 import Page from '../components/Page'
 import Container from '../components/Container'
@@ -9,8 +10,6 @@ import { MainContent } from '../components/MainContent'
 import { Footer } from '../components/Footer'
 import { AnimatedContainer, Animation } from '../components/AnimatedContainer'
 import { IntoHeader } from '../components/IntroHeader'
-
-import homeData from '../data/home'
 
 const IndexContainer = styled.div`
   display: flex;
@@ -26,7 +25,53 @@ const IntroContainer = styled.div`
   left: 45%;
 `
 
-function IndexPage() {
+interface IndexProps {
+  data: {
+    site: {
+      siteMetadata: {
+        skills: string[]
+        author: {
+          previousCompany: {
+            link: string
+            name: string
+          }
+          currentCompany: {
+            link: string
+            name: string
+          }
+          email: string
+          jobTitle: string
+        }
+      }
+    }
+  }
+}
+
+export const query = graphql`
+  {
+    site {
+      siteMetadata {
+        skills
+        author {
+          name
+          linkedin
+          previousCompany {
+            link
+            name
+          }
+          currentCompany {
+            link
+            name
+          }
+          email
+          jobTitle
+        }
+      }
+    }
+  }
+`
+
+function IndexPage({ data }: IndexProps) {
   const [introAnimation, setIntroAnimation] = useState(Animation.hidden)
   const [animation, setAnimation] = useState(Animation.hidden)
   const [startSkillAnimation, setStartSkillAnimation] = useState(false)
@@ -60,18 +105,18 @@ function IndexPage() {
               </AnimatedContainer>
             </IntroContainer>
             <AnimatedContainer animation={animation} key={'Header'} delay={350}>
-              <NameHeader name={homeData.name} />
+              <NameHeader />
             </AnimatedContainer>
             <AnimatedContainer animation={animation} key={'Content'} delay={200}>
               <MainContent
-                jobTitle={homeData.jobTitle}
-                skills={homeData.skills}
+                jobTitle={data.site.siteMetadata.author.jobTitle}
+                skills={data.site.siteMetadata.skills}
                 animateSkills={startSkillAnimation}
-                currentJob={homeData.currentCompany.name}
-                currentJobLink={homeData.currentCompany.link}
-                previousJob={homeData.previousCompany.name}
-                previousJobLink={homeData.previousCompany.link}
-                email={homeData.email}
+                currentJob={data.site.siteMetadata.author.currentCompany.name}
+                currentJobLink={data.site.siteMetadata.author.currentCompany.link}
+                previousJob={data.site.siteMetadata.author.previousCompany.name}
+                previousJobLink={data.site.siteMetadata.author.previousCompany.link}
+                email={data.site.siteMetadata.author.email}
               />
             </AnimatedContainer>
             <AnimatedContainer key={'Footer'} animation={animation}>

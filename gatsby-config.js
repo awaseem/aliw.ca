@@ -2,15 +2,68 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-starter-typescript-plus',
-    description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
-    keywords: 'gatsbyjs, gatsby, javascript, sample, something',
+    title: 'Ali Waseem ',
+    description: 'My personal website and blog to talk about anything related from life to development',
+    keywords: 'ali waseem, awaseem, github, full stack developer, calgary, yyc, yycdev',
     siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
     author: {
-      name: 'Resi Respati',
-      url: 'https://twitter.com/resir014',
-      email: 'resir014@gmail.com'
-    }
+      name: 'Ali Waseem',
+      email: 'hello@aliwaseem.com',
+      linkedin: 'https://ca.linkedin.com/in/waseema393',
+      github: 'https://github.com/awaseem',
+      jobTitle: 'Full Stack Developer',
+      currentCompany: {
+        name: 'ATB Innovation',
+        link: 'https://alphabeta.atb.com/'
+      },
+      previousCompany: {
+        name: 'Shareworks by Morgan Stanley',
+        link: 'https://www.shareworks.com/'
+      }
+    },
+    skills: [
+      'TypeScript',
+      'Golang',
+      'Java',
+      'Kotlin',
+      'Swift',
+      'Xcode',
+      'CSS',
+      'JavaScript',
+      'AWS',
+      'GCP',
+      'Machine Learning',
+      'Artificial Intelligence',
+      'Jenkins X',
+      'Kubernetes',
+      'Docker',
+      'Terraform',
+      'Rust',
+      'Continuous Deployment',
+      'Full Stack Development',
+      'Design',
+      'Swift UI',
+      'React Native',
+      'React',
+      'Vue.js',
+      'gRPC',
+      'GraphQL',
+      'REST Api',
+      'Node.js',
+      'C++',
+      'C#',
+      'Unity',
+      'Linting',
+      'Debugging',
+      'Decision Architecture',
+      'TensorFlow',
+      'Python',
+      'Scala',
+      'Apache Beam',
+      'MySQL',
+      'MongoDB',
+      'PostgreSQL'
+    ]
   },
   plugins: [
     {

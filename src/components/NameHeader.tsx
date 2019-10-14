@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
-
-import homeData from '../data/home'
+import { graphql, useStaticQuery } from 'gatsby'
 
 const StyledContainer = styled.div`
   display: flex;
@@ -19,17 +18,43 @@ const StyledText = styled.span`
   font-size: 1.35rem;
 `
 
+export interface HeaderQuery {
+  site: {
+    siteMetadata: {
+      author: {
+        name: string
+        linkedin: string
+        github: string
+      }
+    }
+  }
+}
+
 export function NameHeader() {
+  const data = useStaticQuery<HeaderQuery>(graphql`
+    {
+      site {
+        siteMetadata {
+          author {
+            name
+            linkedin
+            github
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <StyledContainer>
       <div>
-        <StyledText>{homeData.name}</StyledText>
+        <StyledText>{data.site.siteMetadata.author.name}</StyledText>
       </div>
       <div>
-        <a target={'_blank'} href={homeData.github}>
+        <a target={'_blank'} href={data.site.siteMetadata.author.github}>
           <FaGithub size={24} />
         </a>
-        <a target={'_blank'} href={homeData.linkedin}>
+        <a target={'_blank'} href={data.site.siteMetadata.author.linkedin}>
           <FaLinkedinIn style={{ marginLeft: '0.75rem' }} size={24} />
         </a>
       </div>
