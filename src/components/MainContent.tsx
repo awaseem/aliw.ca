@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
+import { IoIosMail } from 'react-icons/io'
 import { colors } from '../styles/variables'
 import { AnimatedContainer, Animation } from './AnimatedContainer'
 import { getRandomArbitrary } from '../utils/mainUtil'
@@ -76,17 +77,17 @@ export function MainContent({
     if (animateSkills) {
       setTimeout(() => {
         setTechAnimation(Animation.leave)
-      }, 1500)
+      }, 1000)
 
       setTimeout(() => {
         const num = getRandomArbitrary(0, skills.length)
-        console.log(num)
-        setSkillIndex(num)
-      }, 2000)
-
-      setTimeout(() => {
+        if (num === skillIndex) {
+          setSkillIndex(num + 1)
+        } else {
+          setSkillIndex(num)
+        }
         setTechAnimation(Animation.show)
-      }, 2500)
+      }, 2000)
     }
   }, [animateSkills, skillIndex])
 
@@ -114,7 +115,10 @@ export function MainContent({
           </JobLocationHref>
         </p>
       </TaglineContainer>
-      <EmailTag>{email}</EmailTag>
+      <EmailTag>
+        <IoIosMail style={{ marginTop: 5, fontSize: '1rem', marginLeft: 5, marginRight: 5 }} />
+        {email}
+      </EmailTag>
     </StyledContainer>
   )
 }
