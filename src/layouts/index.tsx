@@ -18,31 +18,33 @@ interface StaticQueryProps {
   }
 }
 
-const IndexLayout: React.FC = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query IndexLayoutQuery {
-        site {
-          siteMetadata {
-            title
-            description
+export function IndexLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <StaticQuery
+      query={graphql`
+        query IndexLayoutQuery {
+          site {
+            siteMetadata {
+              title
+              description
+            }
           }
         }
-      }
-    `}
-    render={(data: StaticQueryProps) => (
-      <LayoutRoot>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: data.site.siteMetadata.description },
-            { name: 'keywords', content: data.site.siteMetadata.keywords }
-          ]}
-        />
-        <LayoutMain>{children}</LayoutMain>
-      </LayoutRoot>
-    )}
-  />
-)
+      `}
+      render={(data: StaticQueryProps) => (
+        <LayoutRoot>
+          <Helmet
+            title={data.site.siteMetadata.title}
+            meta={[
+              { name: 'description', content: data.site.siteMetadata.description },
+              { name: 'keywords', content: data.site.siteMetadata.keywords }
+            ]}
+          />
+          <LayoutMain>{children}</LayoutMain>
+        </LayoutRoot>
+      )}
+    />
+  )
+}
 
 export default IndexLayout

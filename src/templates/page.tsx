@@ -1,9 +1,10 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Page from '../components/Page'
-import Container from '../components/Container'
 import IndexLayout from '../layouts'
+import styled from '@emotion/styled'
+import { colors } from '../styles/variables'
 
 interface PageTemplateProps {
   data: {
@@ -22,24 +23,11 @@ interface PageTemplateProps {
       excerpt: string
       frontmatter: {
         title: string
+        date: string
       }
     }
   }
 }
-
-const PageTemplate: React.SFC<PageTemplateProps> = ({ data }) => (
-  <IndexLayout>
-    <Page>
-      <Container>
-        <h1>{data.markdownRemark.frontmatter.title}</h1>
-        {/* eslint-disable-next-line react/no-danger */}
-        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-      </Container>
-    </Page>
-  </IndexLayout>
-)
-
-export default PageTemplate
 
 export const query = graphql`
   query PageTemplateQuery($slug: String!) {
@@ -58,7 +46,57 @@ export const query = graphql`
       excerpt
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }
 `
+
+const Container = styled.div`
+  margin: 0 auto;
+  max-width: 52rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+`
+
+const HeadingContainer = styled.div`
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+`
+
+const ArticleInfoContainer = styled.div`
+  margin-bottom: 5rem;
+`
+
+const Header = styled.h1`
+  font-style: italic;
+  font-weight: 500;
+  font-size: 4rem;
+`
+
+export function PageTemplate({ data }: PageTemplateProps) {
+  return (
+    <IndexLayout>
+      <Page>
+        <Container>
+          <HeadingContainer>
+            <Header>{data.markdownRemark.frontmatter.title}</Header>
+          </HeadingContainer>
+          <ArticleInfoContainer>
+            <p>
+              by{' '}
+              <Link style={{ color: colors.black, fontWeight: 500 }} to={'/'}>
+                Ali Waseem
+              </Link>{' '}
+              on <i>{data.markdownRemark.frontmatter.date}</i>
+            </p>
+          </ArticleInfoContainer>
+          {/* eslint-disable-next-line react/no-danger */}
+          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        </Container>
+      </Page>
+    </IndexLayout>
+  )
+}
+
+export default PageTemplate
