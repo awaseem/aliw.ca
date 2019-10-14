@@ -74,6 +74,18 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ali Waseem`,
+        short_name: `awaseem`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#000`,
+        display: `standalone`,
+        icon: `src/images/icon.png`
+      }
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
