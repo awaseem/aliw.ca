@@ -76,17 +76,17 @@ export function MainContent({
     if (animateSkills) {
       setTimeout(() => {
         setTechAnimation(Animation.leave)
-      }, 1500)
+      }, 1000)
 
       setTimeout(() => {
         const num = getRandomArbitrary(0, skills.length)
-        console.log(num)
-        setSkillIndex(num)
-      }, 2000)
-
-      setTimeout(() => {
+        if (num === skillIndex) {
+          setSkillIndex(num + 1)
+        } else {
+          setSkillIndex(num)
+        }
         setTechAnimation(Animation.show)
-      }, 2500)
+      }, 2000)
     }
   }, [animateSkills, skillIndex])
 
