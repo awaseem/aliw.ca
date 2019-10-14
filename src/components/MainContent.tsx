@@ -3,8 +3,6 @@ import styled from '@emotion/styled'
 import { colors } from '../styles/variables'
 import { AnimatedContainer, Animation } from './AnimatedContainer'
 
-const skills = ['TypeScript', 'Golang']
-
 const StyledContainer = styled.div``
 
 const HeadingContainer = styled.div`
@@ -23,7 +21,7 @@ const MainHeader = styled.h1`
 `
 
 const TechWeight = styled.b`
-  margin-left: 10px;
+  margin-left: 15px;
   font-weight: 500;
 
   @media screen and (max-width: 850px) {
@@ -54,9 +52,10 @@ export interface MainContentProps {
   currentJob: string
   previousJob: string
   animateSkills: boolean
+  skills: string[]
 }
 
-export function MainContent({ email, currentJob, previousJob, animateSkills }: MainContentProps) {
+export function MainContent({ email, currentJob, previousJob, animateSkills, skills }: MainContentProps) {
   const [skillIndex, setSkillIndex] = useState(0)
   const [techAnimation, setTechAnimation] = useState(Animation.show)
 

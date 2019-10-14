@@ -10,6 +10,8 @@ import { Footer } from '../components/Footer'
 import { AnimatedContainer, Animation } from '../components/AnimatedContainer'
 import { IntoHeader } from '../components/IntroHeader'
 
+import homeData from '../data/home'
+
 const IndexContainer = styled.div`
   display: flex;
   flex: 1;
@@ -58,14 +60,15 @@ function IndexPage() {
               </AnimatedContainer>
             </IntroContainer>
             <AnimatedContainer animation={animation} key={'Header'} delay={350}>
-              <NameHeader name={'Ali Waseem'} />
+              <NameHeader name={homeData.name} />
             </AnimatedContainer>
             <AnimatedContainer animation={animation} key={'Content'} delay={200}>
               <MainContent
+                skills={homeData.skills}
                 animateSkills={startSkillAnimation}
-                currentJob={'ATB Innovation'}
-                previousJob={'Shareworks by Morgan Stanley'}
-                email={'hello@aliwaseem.com'}
+                currentJob={homeData.currentCompany.name}
+                previousJob={homeData.previousCompany.name}
+                email={homeData.email}
               />
             </AnimatedContainer>
             <AnimatedContainer key={'Footer'} animation={animation}>
