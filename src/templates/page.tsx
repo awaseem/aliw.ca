@@ -1,10 +1,11 @@
-import * as React from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
 import styled from '@emotion/styled'
 import { colors } from '../styles/variables'
+import { AnimatedContainer, Animation } from '../components/AnimatedContainer'
 
 interface PageTemplateProps {
   data: {
@@ -75,24 +76,33 @@ const Header = styled.h1`
 `
 
 export function PageTemplate({ data }: PageTemplateProps) {
+  const [animation, setAnimation] = useState(Animation.hidden)
+
+  useEffect(() => {
+    setAnimation(Animation.show)
+  }, [])
+
   return (
     <IndexLayout>
       <Page>
         <Container>
-          <HeadingContainer>
-            <Header>{data.markdownRemark.frontmatter.title}</Header>
-          </HeadingContainer>
-          <ArticleInfoContainer>
-            <p>
-              by{' '}
-              <Link style={{ color: colors.black, fontWeight: 500 }} to={'/'}>
-                Ali Waseem
-              </Link>{' '}
-              on <i>{data.markdownRemark.frontmatter.date}</i>
-            </p>
-          </ArticleInfoContainer>
-          {/* eslint-disable-next-line react/no-danger */}
-          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+          <AnimatedContainer animation={animation} delay={100}>
+            <HeadingContainer>
+              <Header>{data.markdownRemark.frontmatter.title}</Header>
+            </HeadingContainer>
+            <ArticleInfoContainer>
+              <p>
+                by{' '}
+                <Link style={{ color: colors.black, fontWeight: 500 }} to={'/'}>
+                  Ali Waseem
+                </Link>{' '}
+                on <i>{data.markdownRemark.frontmatter.date}</i>
+              </p>
+            </ArticleInfoContainer>
+          </AnimatedContainer>
+          <AnimatedContainer animation={animation} delay={300}>
+            <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+          </AnimatedContainer>
         </Container>
       </Page>
     </IndexLayout>

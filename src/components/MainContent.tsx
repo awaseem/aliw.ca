@@ -114,7 +114,7 @@ export function MainContent({
           </JobLocationHref>
         </p>
       </TaglineContainer>
-      <EmailTag>{email}</EmailTag>
+      <EmailTag href={`mailto:${email}`}>{email}</EmailTag>
     </StyledContainer>
   )
 }
