@@ -65,7 +65,7 @@ const HeadingContainer = styled.div`
 `
 
 const ArticleInfoContainer = styled.div`
-  margin-bottom: 5rem;
+  margin-bottom: 3.5rem;
 `
 
 const Header = styled.h1`
