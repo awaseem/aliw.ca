@@ -1,9 +1,17 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
+
+import homeData from '../data/home'
 
 const StyledContainer = styled.div`
+  display: flex;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `
 
 const StyledText = styled.span`
@@ -11,14 +19,20 @@ const StyledText = styled.span`
   font-size: 1.35rem;
 `
 
-export interface NameHeaderProps {
-  name: string
-}
-
-export function NameHeader({ name }: NameHeaderProps) {
+export function NameHeader() {
   return (
     <StyledContainer>
-      <StyledText>{name}</StyledText>
+      <div>
+        <StyledText>{homeData.name}</StyledText>
+      </div>
+      <div>
+        <a target={'_blank'} href={homeData.github}>
+          <FaGithub size={24} />
+        </a>
+        <a target={'_blank'} href={homeData.linkedin}>
+          <FaLinkedinIn style={{ marginLeft: '0.75rem' }} size={24} />
+        </a>
+      </div>
     </StyledContainer>
   )
 }

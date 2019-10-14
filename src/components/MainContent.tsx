@@ -76,7 +76,7 @@ export function MainContent({
     if (animateSkills) {
       setTimeout(() => {
         setTechAnimation(Animation.leave)
-      }, 1000)
+      }, 1250)
 
       setTimeout(() => {
         const num = getRandomArbitrary(0, skills.length)

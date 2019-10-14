@@ -1,6 +1,8 @@
 export default {
   name: 'Ali Waseem',
   jobTitle: 'Full Stack Developer',
+  linkedin: 'https://ca.linkedin.com/in/waseema393',
+  github: 'https://github.com/awaseem',
   currentCompany: {
     name: 'ATB Innovation',
     link: 'https://alphabeta.atb.com/'
