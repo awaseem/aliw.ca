@@ -64,6 +64,7 @@ function IndexPage() {
             </AnimatedContainer>
             <AnimatedContainer animation={animation} key={'Content'} delay={200}>
               <MainContent
+                jobTitle={homeData.jobTitle}
                 skills={homeData.skills}
                 animateSkills={startSkillAnimation}
                 currentJob={homeData.currentCompany.name}

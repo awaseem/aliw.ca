@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
 import { colors } from '../styles/variables'
 import { AnimatedContainer, Animation } from './AnimatedContainer'
+import { getRandomArbitrary } from '../utils/mainUtil'
 
 const StyledContainer = styled.div``
 
@@ -49,13 +50,14 @@ const JobLocationHref = styled.a`
 
 export interface MainContentProps {
   email: string
+  jobTitle: string
   currentJob: string
   previousJob: string
   animateSkills: boolean
   skills: string[]
 }
 
-export function MainContent({ email, currentJob, previousJob, animateSkills, skills }: MainContentProps) {
+export function MainContent({ email, currentJob, jobTitle, previousJob, animateSkills, skills }: MainContentProps) {
   const [skillIndex, setSkillIndex] = useState(0)
   const [techAnimation, setTechAnimation] = useState(Animation.show)
 
@@ -66,11 +68,9 @@ export function MainContent({ email, currentJob, previousJob, animateSkills, ski
       }, 1500)
 
       setTimeout(() => {
-        if (skillIndex === skills.length - 1) {
-          setSkillIndex(0)
-        } else {
-          setSkillIndex(skillIndex + 1)
-        }
+        const num = getRandomArbitrary(0, skills.length)
+        console.log(num)
+        setSkillIndex(num)
       }, 2000)
 
       setTimeout(() => {
@@ -91,8 +91,7 @@ export function MainContent({ email, currentJob, previousJob, animateSkills, ski
       </HeadingContainer>
       <TaglineContainer>
         <p>
-          Ali is a <b>Full Stack Developer</b> currently working at{' '}
-          <JobLocationHref onClick={() => undefined}>{currentJob}.</JobLocationHref>
+          Ali is a <b>{jobTitle}</b> currently working at <JobLocationHref onClick={() => undefined}>{currentJob}.</JobLocationHref>
         </p>
         <p>
           Previously at <JobLocationHref>{previousJob}</JobLocationHref>
