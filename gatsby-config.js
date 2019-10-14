@@ -52,10 +52,14 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        fonts: [`Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i`],
-        display: 'swap'
+        fonts: [
+          {
+            family: `Roboto`,
+            variants: ['100', '100i', '300', '300i', '400', '400i', '500', '500i', '700', '700i', '900', '900i']
+          }
+        ]
       }
     },
     'gatsby-plugin-emotion',

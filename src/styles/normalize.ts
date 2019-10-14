@@ -28,12 +28,12 @@ export default `
   }
 
   a {
-    color: ${colors.brand};
-    text-decoration: none;
+    color: ${colors.black};
+    text-decoration: underline;
 
     &:hover,
     &:focus {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 
@@ -110,7 +110,9 @@ export default `
 
   p {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    line-height: 2rem;
   }
 
   strong {
@@ -155,5 +157,9 @@ export default `
       padding-right: 5rem;
       padding-left: 1.25rem;
     }
+  }
+
+  .gatsby-highlight {
+    margin-bottom: 1.75rem;
   }
 `
