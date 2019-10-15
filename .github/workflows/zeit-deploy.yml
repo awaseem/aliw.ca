@@ -1,0 +1,23 @@
+name: Zeit Deploy
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 10.16.0
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.16.0'
+      - name: npm install, build, and test
+        run: |
+          npm install
+        env:
+          CI: true
+      - name: deploy to zeit
+        run: npm run deploy
+        env:
+          NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
