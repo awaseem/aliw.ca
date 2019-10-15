@@ -14,7 +14,7 @@ With this new website I want to do just that, show case a new minimal website an
 
 <br />
 
-![2015 webiste](./2015-website.png)
+![2015 webiste](./images/2015-website.png)
 
 2015 was a weird time. I was just finishing up my internship and trying my best to create a portfolio that would help me start my career, but to showcase my talent I needed a website.
 
@@ -78,4 +78,16 @@ The design on the other hand does not hold up in anyway. First of all I don't kn
 
 Also the hover state doesn't make sense on any of my portfolio items, why show the title again when hovering of the item? Like the items name is already visible...
 
-Anyway after 4 years I was extremely proud of what I made, and if you want to see what it looks like check it out on wayback machine [here](https://web.archive.org/web/20150927214543/http://aliwaseem.com/)
+Anyway after 4 years I was extremely proud of what I made, and if you want to see what it looks like check it out on wayback machine [here](https://web.archive.org/web/20150927214543/http://aliwaseem.com/) and view all the source code on [Github](https://github.com/awaseem/aliwaseem.com)
+
+## 2016: Age of React
+
+<br />
+
+![2015 webiste](./images/jam-comps.png)
+
+2016 was a great year for me, I had just relocated to Los Angeles to work at a [GoGuardian](https://www.goguardian.com/) that was developing on a more modern development stack. **This was where my career really sky rocketed, all my peers really challenged me to think outside the box and bring solutions to problems that I would have never encountered in Calgary.** So with all these new skills under my belt, it was time to redesign my brand, but this time I decided to something a bit different (Spoiler I ended up creating CMS system again 🙃).
+
+At this point I had fully given up on templating with HandlerBars.js to fully embrace client side rendering with the use of React. I just didn't want to just recreate my website using React, and looking back I never even intended to create a personal website again. Instead I wanted to design a standalone component library using Reacts biggest strength: **component based user interfaces.**
+
+The inspiration actually came from GoGuardian's own internal component library (obviously with very different component designs). My spin on it was that going forward if I needed to build a web application, I can re-use components from my own personal library vs. re writing everything from scratch. Now this was the time where [Storybook.js](https://storybook.js.org/) was gaining popularity, but unfortunately split under my radar when I embarked on this project (I did end up implementing a Storybook.js based component library with React, but that can be another blog post).
