@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 
 const Container = styled.div`
   margin: 1.5rem auto;
-  width: 52rem;
+  width: 58rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 `

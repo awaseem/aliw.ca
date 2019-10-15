@@ -48,7 +48,9 @@ export function NameHeader() {
   return (
     <StyledContainer>
       <div>
-        <StyledText>{data.site.siteMetadata.author.name}</StyledText>
+        <Link style={{ textDecoration: 'none' }} to={'/'}>
+          <StyledText>{data.site.siteMetadata.author.name}</StyledText>
+        </Link>
       </div>
       <div>
         <Link to={'/blog'}>

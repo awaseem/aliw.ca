@@ -9,7 +9,7 @@ import { NameHeader } from '../components/NameHeader'
 import { MainContent } from '../components/MainContent'
 import { Footer } from '../components/Footer'
 import { AnimatedContainer, Animation } from '../components/AnimatedContainer'
-import { IntoHeader } from '../components/IntroHeader'
+import { IntroAnimationHeader } from '../components/IntroAnimationHeader'
 
 const IndexContainer = styled.div`
   display: flex;
@@ -17,12 +17,6 @@ const IndexContainer = styled.div`
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
-`
-
-const IntroContainer = styled.div`
-  position: fixed;
-  top: 45%;
-  left: 45%;
 `
 
 interface IndexProps {
@@ -99,11 +93,7 @@ function IndexPage({ data }: IndexProps) {
       <Page>
         <Container>
           <IndexContainer>
-            <IntroContainer>
-              <AnimatedContainer animation={introAnimation} delay={150}>
-                <IntoHeader text={'Hi.'} />
-              </AnimatedContainer>
-            </IntroContainer>
+            <IntroAnimationHeader text={'Hi.'} delay={150} animation={introAnimation} />
             <AnimatedContainer animation={animation} key={'Header'} delay={350}>
               <NameHeader />
             </AnimatedContainer>
