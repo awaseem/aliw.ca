@@ -12,7 +12,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '10.16.0'
-      - name: npm install, build, and test
+      - name: npm install and build
         run: |
           npm install
           npm run build

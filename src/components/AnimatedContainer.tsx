@@ -36,7 +36,7 @@ const AnimatedNameContainer = posed.div({
 
 export function AnimatedContainer({ animation = Animation.hidden, children, delay = 0, position }: AnimatedContainerProps) {
   return (
-    <AnimatedNameContainer style={{ position: position || 'relative' }} delay={delay} pose={animation}>
+    <AnimatedNameContainer style={{ position: position || 'relative', opacity: 0 }} delay={delay} pose={animation}>
       {children}
     </AnimatedNameContainer>
   )
