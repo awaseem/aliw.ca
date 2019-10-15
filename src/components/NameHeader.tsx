@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
-import { graphql, useStaticQuery } from 'gatsby'
+import { FaGithub, FaLinkedinIn, FaBookOpen } from 'react-icons/fa'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 
 const StyledContainer = styled.div`
   display: flex;
@@ -51,8 +51,11 @@ export function NameHeader() {
         <StyledText>{data.site.siteMetadata.author.name}</StyledText>
       </div>
       <div>
+        <Link to={'/blog'}>
+          <FaBookOpen size={24} />
+        </Link>
         <a target={'_blank'} href={data.site.siteMetadata.author.github}>
-          <FaGithub size={24} />
+          <FaGithub size={24} style={{ marginLeft: '0.75rem' }} />
         </a>
         <a target={'_blank'} href={data.site.siteMetadata.author.linkedin}>
           <FaLinkedinIn style={{ marginLeft: '0.75rem' }} size={24} />

@@ -8,10 +8,14 @@ const IntroH1 = styled.h1`
   font-weight: 500;
 `
 
-export function IntoHeader() {
+export interface IntoHeaderProps {
+  text: string
+}
+
+export function IntoHeader({ text }: IntoHeaderProps) {
   return (
     <AbsoluteCenteredDiv>
-      <IntroH1>Hi.</IntroH1>
+      <IntroH1>{text}</IntroH1>
     </AbsoluteCenteredDiv>
   )
 }

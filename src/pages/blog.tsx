@@ -1,11 +1,13 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React, { useState } from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 import styled from '@emotion/styled'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
 import { BlogContainer } from '../components/BlogContainer'
 import { NameHeader } from '../components/NameHeader'
 import { BlogPostRow } from '../components/BlogPostRow'
+import { Footer } from '../components/Footer'
+import { Animation } from '../components/AnimatedContainer'
 
 interface BlogProps {
   data: {
@@ -63,6 +65,8 @@ const TagLineContainer = styled.div`
 `
 
 function Blog({ data }: BlogProps) {
+  const [animated, setAnimation] = useState(Animation.hidden)
+
   const blogPosts = data.allMarkdownRemark.edges.map(data => (
     <BlogPostRow
       key={data.node.fields.slug}

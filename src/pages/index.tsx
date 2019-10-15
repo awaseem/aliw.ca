@@ -101,7 +101,7 @@ function IndexPage({ data }: IndexProps) {
           <IndexContainer>
             <IntroContainer>
               <AnimatedContainer animation={introAnimation} delay={150}>
-                <IntoHeader />
+                <IntoHeader text={'Hi.'} />
               </AnimatedContainer>
             </IntroContainer>
             <AnimatedContainer animation={animation} key={'Header'} delay={350}>

@@ -2,10 +2,10 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Ali Waseem ',
+    title: 'Ali Waseem',
     description: 'My personal website and blog to talk about anything related from life to development',
     keywords: 'ali waseem, awaseem, github, full stack developer, calgary, yyc, yycdev',
-    siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
+    siteUrl: 'https://aliwaseem.com',
     author: {
       name: 'Ali Waseem',
       email: 'hello@aliwaseem.com',
