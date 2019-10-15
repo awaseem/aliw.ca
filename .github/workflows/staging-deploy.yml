@@ -1,6 +1,9 @@
 name: Zeit Deploy
 
-on: [push]
+on:
+  push:
+    branches:
+      - develop
 
 jobs:
   build:
@@ -19,6 +22,6 @@ jobs:
         env:
           CI: true
       - name: deploy to zeit
-        run: npm run deploy
+        run: npm run deploy-staging
         env:
           NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
