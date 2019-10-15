@@ -12,8 +12,7 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "rimraf public",
-    "deploy-staging": "now --token=$NOW_TOKEN --target staging",
-    "deploy-prod": "now --token=$NOW_TOKEN --target prod",
+    "deploy": "now --token=$NOW_TOKEN --target prod",
     "dev": "gatsby develop",
     "format": "prettier --write \"src/**/*.{ts,tsx,md}\"",
     "lint": "tslint 'src/**/*.{ts,tsx}'",
