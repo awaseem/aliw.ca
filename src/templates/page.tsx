@@ -6,6 +6,8 @@ import IndexLayout from '../layouts'
 import styled from '@emotion/styled'
 import { colors } from '../styles/variables'
 import { AnimatedContainer, Animation } from '../components/AnimatedContainer'
+import { BlogContainer } from '../components/BlogContainer'
+import { NameHeader } from '../components/NameHeader'
 
 interface PageTemplateProps {
   data: {
@@ -51,13 +53,6 @@ export const query = graphql`
   }
 `
 
-const Container = styled.div`
-  margin: 0 auto;
-  max-width: 52rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-`
-
 const HeadingContainer = styled.div`
   margin-top: 3rem;
   margin-bottom: 1rem;
@@ -83,7 +78,8 @@ export function PageTemplate({ data }: PageTemplateProps) {
   return (
     <IndexLayout>
       <Page>
-        <Container>
+        <BlogContainer>
+          <NameHeader />
           <AnimatedContainer animation={animation} delay={100}>
             <HeadingContainer>
               <Header>{data.markdownRemark.frontmatter.title}</Header>
@@ -101,7 +97,7 @@ export function PageTemplate({ data }: PageTemplateProps) {
           <AnimatedContainer animation={animation} delay={300}>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           </AnimatedContainer>
-        </Container>
+        </BlogContainer>
       </Page>
     </IndexLayout>
   )

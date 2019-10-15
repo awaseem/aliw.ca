@@ -9,8 +9,11 @@ const StyledPage = styled.div`
 
 interface PageProps {
   className?: string
+  children: React.ReactNode
 }
 
-const Page: React.FC<PageProps> = ({ children, className }) => <StyledPage className={className}>{children}</StyledPage>
+export function Page({ children, className }: PageProps) {
+  return <StyledPage className={className}>{children}</StyledPage>
+}
 
 export default Page
