@@ -8,6 +8,11 @@ const StyledContainer = styled.div`
   margin-right: 3rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+
+  @media screen and (max-width: 850px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 `
 
 interface ContainerProps {
