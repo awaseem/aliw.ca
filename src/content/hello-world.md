@@ -84,10 +84,20 @@ Anyway after 4 years I was extremely proud of what I made, and if you want to se
 
 <br />
 
-![2015 webiste](./images/jam-comps.png)
+![jam components website](./images/jam-comps.png)
 
 2016 was a great year for me, I had just relocated to Los Angeles to work at a [GoGuardian](https://www.goguardian.com/) that was developing on a more modern development stack. **This was where my career really sky rocketed, all my peers really challenged me to think outside the box and bring solutions to problems that I would have never encountered in Calgary.** So with all these new skills under my belt, it was time to redesign my brand, but this time I decided to something a bit different (Spoiler I ended up creating CMS system again 🙃).
 
 At this point I had fully given up on templating with HandlerBars.js to fully embrace client side rendering with the use of React. I just didn't want to just recreate my website using React, and looking back I never even intended to create a personal website again. Instead I wanted to design a standalone component library using Reacts biggest strength: **component based user interfaces.**
 
 The inspiration actually came from GoGuardian's own internal component library (obviously with very different component designs). My spin on it was that going forward if I needed to build a web application, I can re-use components from my own personal library vs. re writing everything from scratch. Now this was the time where [Storybook.js](https://storybook.js.org/) was gaining popularity, but unfortunately split under my radar when I embarked on this project (I did end up implementing a Storybook.js based component library with React, but that can be another blog post).
+
+I based my component library on [Skelton.css](http://getskeleton.com/) for the design and [Anime.js](https://animejs.com/) for animations. In the end I ended up creating [Jam](https://awaseem.github.io/Jam/). Now I would not recommend using Jam, as it's horribly out of date and I have no idea how well it still integrates into new React projects. Once I had finished creating the library, I had no idea what do actually build next, so just to test out the components I decided to build a redesigned personal website. **The sad thing is that I only ever used the component library for my personal site and then quickly abandoned it.**
+
+I actually liked the design of this website, it was still very similar to my previous to my one but with a bigger higher resolution image. The buttons were clean and the typography was sharp yet readable. I do remember that the buttons within Jam had this obnoxious jump animation, that I ended up disabling, now as to why I added that animation in the first place: 🤷.
+
+![2016 personal website](./images/2016-website.png)
+
+<br />
+
+And yes I did end up creating another CMS system that talked to a Go based Redis wrapper exposed through a REST api named [blob](https://github.com/awaseem/blob), and an auth service that I created in Go as well called [JWTea](https://github.com/awaseem/JWTea). The idea behind these services was similar to Jam, it was going to be used more than once for other projects. Sadly like Jam, they were only used for my personal website. Even with all that work I realistically only updating the website maybe twice. These were obviously overkill for a personal website...but hey at least it was a learning opportunity.
