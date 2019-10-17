@@ -52,16 +52,15 @@ const TitleContainer = styled.div`
 `
 
 const TagLineContainer = styled.div`
-  margin-bottom: 0rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 `
 
 const Title = styled.h1`
   font-size: 4rem;
 `
 
-const Tagline = styled.p`
-  font-style: italic;
-`
+const Tagline = styled.p``
 
 const PostsContainer = styled.div`
   margin-top: 3rem;
