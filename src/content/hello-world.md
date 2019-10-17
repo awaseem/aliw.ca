@@ -100,6 +100,8 @@ Unfortently you can't view the website on Wayback Machine, but all the source co
 
 ## 2019: Re-branding
 
+![2019 website](./images/2019-phone-mockup.png)
+
 So after starting my career and building these platforms for my personal brand, why take such a long break? Well life happened, I moved back to Calgary to work for Solium (aka [Shareworks by Morgan Stanley](https://www.shareworks.com/)). At this point I never really updated anything related to myself. Slowly all my projects had their domains expired, my Linkedin had never changed since 2015 (except for my new roles) and personally the changes I was making within Solium was to interesting for me to really focus on my external image. I'm extremely proud of all the things I accomplished in my career at Solium, but it still bothered me that if people were to look me up, they would receive a brand of myself from the past.
 
 So now we come to Thanksgiving 2019 (Canadian Thanksgiving) were I couldn't let that thought exist and decided to re-create a new platform that is more than just a website to showcase my talent. This is where the adventure began and its completely different in some cases than my other personal websites. I was heavily inspired by [OverReacted.io](https://overreacted.io/) by [Dan Abramov](https://mobile.twitter.com/dan_abramov) and also wanted to add a blog component where I could share my thoughts about anything from development to life lessons. This is the reason why I created [aliw.ca](https://aliw.ca) an extremely clean and minimal design that showcases my skills with a built in blog to highlight my opinions on development and life.
