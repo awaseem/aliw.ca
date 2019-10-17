@@ -119,3 +119,7 @@ When I need to write new content for the blog, I simply add a markdown page with
 When I set out to create a new website, I wanted the design to be unique and completely different than what I've done in the past. That why the whole website has basically no color and only text with some light icon usage. Even though I had no colors to choose from, I still wanted the readers attention, and I personally feel I accomplished that with the use of 'fade in' style animations. These animations really help give the idea that this website is more alive vs. simple black text on a white page.
 
 You'll also notice there is no mention of personal projects, both my previous sites had projects has the main showcase. This time around I really wanted to showcase my skills, and I wanted to present them in a minimal and digestible way. The approach I took was to create this rotating text that randomly picks any one of my skills and presents it the user. It's small and minimal, but once the text starts rotating it grabs the readers attention directly to the center page to see what other skills can potentially pop up.
+
+## Closing thoughts
+
+I've had quite a journey from personal websites creation. This design I'm happy about the most, it's clean and done a great job of showcasing the developer I am vs the developer I was. I hope you enjoyed reading my journey, I'll be doing more of these posts in the future about various other aspects of my life going beyond the scope of development. Thanks again and feel free to [connect.](https://ca.linkedin.com/in/waseema393)
