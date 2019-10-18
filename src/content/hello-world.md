@@ -4,13 +4,13 @@ title: 'Hello world!'
 date: '2019-10-14'
 ---
 
-It's been a long time since I launched my website and even longer since I've launched a personal blog. I think for me I defenitly lost touch on branding myself as an individual and my talents. Heck the only time I updated my Linkedin was in 2015 when I was just graduting university.
+It's been a long time since I launched my website and even longer since I launched a personal blog. For me, I definitely lost touch on branding myself as an individual and my talents. Heck, the last time I updated my LinkedIn profile was in 2015 when I was just graduating university.
 
-It took me sometime to really understand how important personal brand is! The way you present youself to others can be your biggest asset to showcase your talent.
+It took me sometime to really understand how important a personal brand really is! The way you present yourself to others can be your biggest asset to showcase your talent.
 
-With this new website I want to do just that, show case a new minimal website and compare it's branding vs. my personal websites of the past.
+With this new website, I want to do just that--showcase my new, minimal website and compare its branding vs. my past personal websites.
 
-## 2015: Starting a career
+## 2015: Starting my career
 
 ![2015 webiste](./images/2015-website.png)
 
