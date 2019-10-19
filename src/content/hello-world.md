@@ -1,7 +1,7 @@
 ---
 layout: page
-title: 'Hello world!'
-date: '2019-10-14'
+title: 'Personal website hell: past vs. present'
+date: '2019-10-18'
 ---
 
 It's been a long time since I launched my website and even longer since I launched a personal blog. For me, I definitely lost touch on branding myself as an individual and my talents. Heck, the last time I updated my LinkedIn profile was in 2015 when I was just graduating university.
