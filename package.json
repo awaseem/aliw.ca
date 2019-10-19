@@ -1,5 +1,5 @@
 {
-  "name": "aliwaseem.com",
+  "name": "aliw.ca",
   "description": "My personal website and blog to talk about anything related from life to development",
   "version": "1.0.0",
   "private": true,
@@ -12,7 +12,7 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "rimraf public",
-    "deploy": "now --token=$NOW_TOKEN",
+    "deploy": "now --token=$NOW_TOKEN --target prod",
     "dev": "gatsby develop",
     "format": "prettier --write \"src/**/*.{ts,tsx,md}\"",
     "lint": "tslint 'src/**/*.{ts,tsx}'",

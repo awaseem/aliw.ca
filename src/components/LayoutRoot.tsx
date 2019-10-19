@@ -11,13 +11,16 @@ const StyledLayoutRoot = styled.div`
 
 interface LayoutRootProps {
   className?: string
+  children: React.ReactNode
 }
 
-const LayoutRoot: React.FC<LayoutRootProps> = ({ children, className }) => (
-  <>
-    <Global styles={() => css(normalize)} />
-    <StyledLayoutRoot className={className}>{children}</StyledLayoutRoot>
-  </>
-)
+export function LayoutRoot({ children, className }: LayoutRootProps) {
+  return (
+    <>
+      <Global styles={() => css(normalize)} />
+      <StyledLayoutRoot className={className}>{children}</StyledLayoutRoot>
+    </>
+  )
+}
 
 export default LayoutRoot

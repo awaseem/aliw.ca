@@ -5,7 +5,7 @@ module.exports = {
     title: 'Ali Waseem',
     description: 'My personal website and blog to talk about anything related from life to development',
     keywords: 'ali waseem, awaseem, github, full stack developer, calgary, yyc, yycdev',
-    siteUrl: 'https://aliwaseem.com',
+    siteUrl: 'https://aliw.ca',
     author: {
       name: 'Ali Waseem',
       email: 'hello@aliwaseem.com',
@@ -103,7 +103,8 @@ module.exports = {
             options: {
               maxWidth: 1140,
               quality: 90,
-              linkImagesToOriginal: false
+              linkImagesToOriginal: false,
+              wrapperStyle: 'margin: 2rem auto;'
             }
           }
         ]
