@@ -8,6 +8,7 @@ import { colors } from '../styles/variables'
 import { AnimatedContainer, Animation } from '../components/AnimatedContainer'
 import { BlogContainer } from '../components/BlogContainer'
 import { NameHeader } from '../components/NameHeader'
+import { BlogFooter } from '../components/BlogFooter'
 
 interface PageTemplateProps {
   data: {
@@ -96,6 +97,7 @@ export function PageTemplate({ data }: PageTemplateProps) {
           </AnimatedContainer>
           <AnimatedContainer animation={animation} delay={300}>
             <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+            <BlogFooter />
           </AnimatedContainer>
         </BlogContainer>
       </Page>
