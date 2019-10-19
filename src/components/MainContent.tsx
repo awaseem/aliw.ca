@@ -110,7 +110,7 @@ export function MainContent({
         <p>
           Previously at{' '}
           <JobLocationHref href={previousJobLink} target="_blank">
-            {previousJob}
+            {previousJob}.
           </JobLocationHref>
         </p>
       </TaglineContainer>
