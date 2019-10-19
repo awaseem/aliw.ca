@@ -16,7 +16,7 @@ With this new website, I want to do just that&mdash;showcase my new, minimal web
 
 2015 was a weird time. I was just finishing up my internship at [Pason Systems](https://www.pason.com/) and trying my best to create a portfolio that would help start my career; but, to showcase my talent I needed a website.
 
-When I asked my peers what I should do, they all told me to do a simple [jekyll](https://jekyllrb.com/) starter and work my way up from there. But being the "bright," "young" and "reinventing wheel" developer I was, I decided to create my own... **with a full CMS system built from scratch.**
+When I asked my peers what I should do, they all told me to do a simple [jekyll](https://jekyllrb.com/) starter and work my way up from there. But being the "bright," "young" and "reinventing wheel" developer I was, I decided to create my own...**with a full CMS system built from scratch.**
 
 This website was massive and it had every web framework/library under the sun. Semantic UI, jQuery, Express.js, etc...
 
