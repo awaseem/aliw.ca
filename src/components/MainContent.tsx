@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from '@emotion/styled'
 import { colors } from '../styles/variables'
 import { AnimatedContainer, Animation } from './AnimatedContainer'
-import { getRandomArbitrary } from '../utils/mainUtil'
+import { getRandomArbitrary } from '../utils/mathUtil'
 
 const StyledContainer = styled.div``
 
