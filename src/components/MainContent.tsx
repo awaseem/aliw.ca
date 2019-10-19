@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import styled from '@emotion/styled'
 import { colors } from '../styles/variables'
 import { AnimatedContainer, Animation } from './AnimatedContainer'
@@ -69,16 +69,19 @@ export function MainContent({
   animateSkills,
   skills
 }: MainContentProps) {
+  const techAnimationTimer = useRef<NodeJS.Timeout>()
+  const skillIndexTimer = useRef<NodeJS.Timeout>()
+
   const [skillIndex, setSkillIndex] = useState(0)
   const [techAnimation, setTechAnimation] = useState(Animation.show)
 
   useEffect(() => {
     if (animateSkills) {
-      setTimeout(() => {
+      techAnimationTimer.current = setTimeout(() => {
         setTechAnimation(Animation.leave)
       }, 1250)
 
-      setTimeout(() => {
+      skillIndexTimer.current = setTimeout(() => {
         const num = getRandomArbitrary(0, skills.length)
         if (num === skillIndex) {
           setSkillIndex(num + 1)
@@ -89,6 +92,13 @@ export function MainContent({
       }, 2000)
     }
   }, [animateSkills, skillIndex])
+
+  useEffect(() => {
+    return () => {
+      techAnimationTimer.current && clearTimeout(techAnimationTimer.current)
+      skillIndexTimer.current && clearTimeout(skillIndexTimer.current)
+    }
+  }, [])
 
   return (
     <StyledContainer>

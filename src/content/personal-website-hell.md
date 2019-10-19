@@ -124,4 +124,4 @@ Compared to my previous websites, this one does not have a dedicated section for
 
 ## Closing thoughts
 
-I've had quite a journey creating personal websites to showcase my brand. This design is the one I'm most happy about; it's clean and does a great job of showcasing the developer I am vs. the developer I was. I hope you enjoyed reading my journey. I'll be doing more of these posts in the future about various other aspects of my life above beyond the scope of development. Thanks again and feel free to [connect.](https://ca.linkedin.com/in/waseema393)
+I've had quite a journey creating personal websites to showcase my brand. This design is the one I'm most happy about; it's clean and does a great job of showcasing the developer I am vs. the developer I was. I hope you enjoyed reading my journey. I'll be doing more of these posts in the future about various other aspects of my life above beyond the scope of development.
