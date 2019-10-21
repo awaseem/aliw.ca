@@ -114,7 +114,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com'
+        siteUrl: 'https://aliw.ca'
       }
     },
     {
@@ -128,6 +128,7 @@ module.exports = {
         ]
       }
     },
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-emotion',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
