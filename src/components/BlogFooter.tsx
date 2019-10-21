@@ -38,7 +38,11 @@ export function BlogFooter() {
 
   return (
     <Container>
-      <Img style={{ width: 100, height: 100, borderRadius: 50, marginRight: 25 }} fluid={data.fileName.childImageSharp.fluid} />
+      <Img
+        style={{ width: '100%', maxWidth: 100, height: 100, borderRadius: '100%', marginRight: 25 }}
+        imgStyle={{ objectPosition: '50% 25%' }}
+        fluid={data.fileName.childImageSharp.fluid}
+      />
       <div>
         <h3>Ali Waseem</h3>
         <p>
