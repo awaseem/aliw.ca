@@ -9,16 +9,16 @@ module.exports = {
     author: {
       name: 'Ali Waseem',
       email: 'hello@aliwaseem.com',
-      linkedin: 'https://ca.linkedin.com/in/waseema393',
+      linkedin: 'https://ca.linkedin.com/in/aliw',
       github: 'https://github.com/awaseem',
-      jobTitle: 'Full Stack Developer',
+      jobTitle: 'Senior Software Developer',
       currentCompany: {
-        name: 'ATB Innovation',
-        link: 'https://alphabeta.atb.com/'
+        name: 'Energy Toolbase',
+        link: 'https://www.energytoolbase.com/'
       },
       previousCompany: {
-        name: 'Shareworks by Morgan Stanley',
-        link: 'https://www.shareworks.com/'
+        name: 'ATB Innovation',
+        link: 'https://alphabeta.atb.com/'
       }
     },
     skills: [
