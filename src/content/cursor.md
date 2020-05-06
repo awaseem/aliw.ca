@@ -7,7 +7,7 @@ date: '2020-04-21'
 ![Cursor mockup](./images/cursor-mockup.png)
 
 I've always wanted to teach programming to others just so that they can understand what it takes to build something in our modern generation.
-Most of the time, it’s hard to explain some of the technical challenges I tackle every day on the job when talking to my friends, family or even my own fiancée. So, I decided to create Cursor— an app to help others understand some of the inner workings of programming without any barriers to entry.
+Most of the time, it’s hard to explain some of the technical challenges I tackle every day on the job when talking to my friends, family or even my own fiancée. So, I decided to create Cursor—an app to help others understand some of the inner workings of programming without any barriers to entry.
 
 ## No Barriers?
 
@@ -25,7 +25,7 @@ First, I wanted the app to feel good. Scrolling should be smooth, animations sho
 
 When it came to Cursor’s interface, I wanted there to be a single home screen; transitions to content would be done through modals. This would limit the number of options to the user so that they can focus on the content. You'll also notice the buttons to transition you from one course to another requires you to press the button down for a quick second before the app proceeds to the next screen. You might be asking, “Why must you make us wait a whole second before we can move onto the next screen? Why isn’t there just a simple button press?” I debated this for quite some time, but I always felt that a slightly prolonged button press would ensure that the user is atleast reading some content before frantically pressing the “Next” button and moving on. I know some people may find this annoying, so in the future I might add an option to toggle this off.
 
-The wording of the content is always the most difficult part for me. I've been known to have the worst spelling of all time, so I'm sorry if any of those issues pop up. 🙈Also why so many emojis on Cursor? Because emojis show emotion (and they’re fun)! More importantly, it's a way to keep the interaction between the developer and the user’s thoughts at the same level. It might not work all the time, but it atleast presents the information in a more digestible way to the user.
+The wording of the content is always the most difficult part for me. I've been known to have the worst spelling of all time, so I'm sorry if any of those issues pop up 🙈.Also why so many emojis on Cursor? Because emojis show emotion (and they’re fun)! More importantly, it's a way to keep the interaction between the developer and the user’s thoughts at the same level. It might not work all the time, but it atleast presents the information in a more digestible way to the user.
 
 ## Data
 
